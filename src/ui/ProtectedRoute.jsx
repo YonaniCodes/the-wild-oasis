@@ -19,7 +19,6 @@ export default function ProtectedRoute({ children }) {
     if (!isLoading && !isAuthenticated) {
       navigate("/login");
     }
-    console.log(isAuthenticated);
   }, [isLoading, isAuthenticated, navigate]);
 
   // Show a spinner while loading

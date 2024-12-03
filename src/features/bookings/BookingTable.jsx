@@ -9,9 +9,8 @@ function BookingTable() {
   // const bookings = [];
   const { bookings, isError, isLoading, count } = useBookings();
   if (isLoading) return <Spinner />;
-  if (isError) return <Empty message="Something went wrong" />;
   if (bookings.length === 0) return <Empty resourceName={"Bokings"} />;
-  console.log(bookings);
+
   return (
     <Menus>
       <Table columns="0.6fr 2fr 2.4fr 1.4fr 1fr 3.2rem">

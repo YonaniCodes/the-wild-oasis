@@ -27,7 +27,6 @@ function LoginForm() {
 
   return (
     <>
-      <CabinTable />
       <Form onSubmit={handleSubmit}>
         <FormRowVertical label="Email address">
           <Input

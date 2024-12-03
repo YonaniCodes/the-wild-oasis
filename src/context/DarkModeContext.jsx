@@ -5,7 +5,10 @@ const DarkModeContext = createContext();
 
 function DarkModeProvider({ children }) {
   // Fixed typo: "chilldren" -> "children"
-  const [isDarkMode, setIsDarkMode] = useLocalStorageState(false, "isDarkMode");
+  const [isDarkMode, setIsDarkMode] = useLocalStorageState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches,
+    "isDarkMode"
+  );
 
   function toggleDarkMode() {
     setIsDarkMode((isDark) => !isDark);
